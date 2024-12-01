@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOTA XVISUAL FREEROAM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Effects */
+        .aurora-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .aurora {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                rgba(0, 255, 0, 0.1),
+                rgba(0, 255, 0, 0.05),
+                rgba(0, 150, 0, 0.1));
+            animation: aurora 20s infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes aurora {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .description {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 0, 0.1);
+        }
+
+        .welcome-text {
+            font-size: 1.3em;
+            line-height: 1.6;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+
+        .highlight {
+            color: #00ff00;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 255, 0, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 0, 0.1);
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            background: rgba(0, 255, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+
+        .feature-item i {
+            font-size: 28px;
+            color: #00ff00;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .admin-access {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid #00ff00;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .admin-access::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .keyboard-key {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 1.4em;
+            font-weight: bold;
+            min-width: 40px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .join-button {
+            font-size: 1.3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #00cc00, #00ff00);
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .join-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+        }
+
+        .join-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            animation: shine 3s infinite;
+        }
+
+        h2 {
+            color: #00ff00;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+
+        h2 i {
+            margin-right: 10px;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 12px 25px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #00ff00;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #00ff00;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+        }
+
+        .back-btn:hover {
+            background: rgba(0, 255, 0, 0.1);
+            transform: translateX(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+        }
+
+        .back-btn i {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-container">
+        <div class="aurora"></div>
+        <div class="aurora"></div>
+        <div class="aurora"></div>
+    </div>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> BERANDA
+    </a>
+
+    <div class="description">
+        <h2><i class="fas fa-city"></i> Tentang Kota Kami</h2>
+        <p class="welcome-text">
+            Selamat datang di <span class="highlight">Kota XVISUAL FREEROAM</span> - surga para modder dan penggemar grafik GTA V Roleplay! 
+            Nikmati pengalaman bermain tanpa batas dengan akses penuh ke fitur admin.
+        </p>
+        <br>
+        <h2><i class="fas fa-star"></i> Fitur Premium</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                <span>Kontrol Waktu & Cuaca Personal</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-car-side"></i>
+                <span>Spawn Kendaraan Favorit</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-location-crosshairs"></i>
+                <span>Teleport Instan</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-sliders"></i>
+                <span>Kustomisasi Visual Tanpa Batas</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-user-astronaut"></i>
+                <span>Ubah Skin & Animasi Karakter</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-ellipsis"></i>
+                <span>Dan Banyak Lagi...</span>
+            </div>
+        </div>
+        <br>
+        <div class="admin-access">
+            <h3><i class="fas fa-keyboard"></i> Keybind</h3>
+            <p>
+                <span class="keyboard-key">M</span> untuk membuka fitur dan mengubah dunia menuju tak terbatas!
+            </p>
+        </div>
+        <div class="button-container">
+            <a href="https://cfx.re/join/x75k4r" class="join-button">
+                <i class="fas fa-gamepad"></i> MASUK KOTA
+            </a>
+        </div>
+    </div>
+</body>
+</html>

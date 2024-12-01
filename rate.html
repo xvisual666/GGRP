@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>XVISUAL - Rating Layanan</title>
+    <link rel="icon" type="image/png" href="icon/1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .rating-form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #00ffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00ffff;
+            font-size: 14px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00ffff;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #ff00ff;
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+        }
+
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 5px;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+            transition: color 0.2s;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: #ffeb3b;
+            text-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .datetime {
+            color: #00ffff;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-title {
+            text-align: center;
+            color: #00ffff;
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            color: #00ff00;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background: rgba(0, 255, 0, 0.1);
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00ffff;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: linear-gradient(45deg, transparent 50%, #00ffff 50%),
+                            linear-gradient(135deg, #00ffff 50%, transparent 50%);
+            background-position: calc(100% - 20px) calc(1em + 2px),
+                               calc(100% - 15px) calc(1em + 2px);
+            background-size: 5px 5px,
+                           5px 5px;
+            background-repeat: no-repeat;
+            transition: all 0.3s ease;
+        }
+
+        .form-group select:focus {
+            outline: none;
+            border-color: #ff00ff;
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+        }
+
+        .form-group select option {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 10px;
+        }
+
+        .form-group select:hover {
+            border-color: #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-container">
+        <div class="aurora"></div>
+        <div class="aurora"></div>
+        <div class="aurora"></div>
+    </div>
+    
+    <div class="container">
+        <a href="index.html" class="back-btn" style="
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            padding: 8px 15px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            min-width: 80px;
+            text-align: center;
+            font-size: 14px;
+            z-index: 100;">
+            <i class="fas fa-arrow-left"></i> BERANDA
+        </a>
+
+        <div class="rating-form">
+            <h2 class="form-title">Rating Layanan</h2>
+            <form id="ratingForm" onsubmit="submitRating(event)">
+                <div class="datetime" id="currentDateTime"></div>
+                
+                <div class="form-group">
+                    <label>Nama Discord</label>
+                    <input type="text" id="discordName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Kota Bermain</label>
+                    <input type="text" id="cityName">
+                </div>
+
+                <div class="form-group">
+                    <label>VGA</label>
+                    <input type="text" id="vga" placeholder="Kosongkan jika tidak mengetahui spesifikasi VGA">
+                </div>
+
+                <div class="form-group">
+                    <label>Jenis Perangkat</label>
+                    <select id="deviceType">
+                        <option value="">Pilih jenis perangkat</option>
+                        <option value="PC">PC</option>
+                        <option value="Laptop">Laptop</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Rating</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star7" name="rating" value="7">
+                        <label for="star7" class="fas fa-star"></label>
+                        <input type="radio" id="star6" name="rating" value="6">
+                        <label for="star6" class="fas fa-star"></label>
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" class="fas fa-star"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" class="fas fa-star"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" class="fas fa-star"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" class="fas fa-star"></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" class="fas fa-star"></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Catatan</label>
+                    <textarea id="notes" rows="4" placeholder="Bagaimana pengalaman Anda menggunakan mods dan layanan kami? Kami sangat menghargai feedback Anda!"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Kirim Rating</button>
+                <div id="successMessage" class="success-message">
+                    Rating berhasil dikirim! Terima kasih atas feedback Anda.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Update current date time
+        function updateDateTime() {
+            const now = new Date();
+            const timeOptions = {
+                timeZone: 'Asia/Jakarta',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+            
+            const dateOptions = {
+                timeZone: 'Asia/Jakarta',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            };
+            
+            const time = now.toLocaleString('id-ID', timeOptions);
+            const date = now.toLocaleString('id-ID', dateOptions);
+            
+            document.getElementById('currentDateTime').textContent = 
+                `${time} • ${date}`;
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        async function submitRating(event) {
+            event.preventDefault();
+
+            const rating = document.querySelector('input[name="rating"]:checked')?.value;
+            if (!rating) {
+                alert('Mohon berikan rating bintang');
+                return;
+            }
+
+            const currentDateTime = document.getElementById('currentDateTime').textContent;
+            const discordName = document.getElementById('discordName').value;
+            const cityName = document.getElementById('cityName').value;
+            const vga = document.getElementById('vga').value;
+            const deviceType = document.getElementById('deviceType').value;
+            const notes = document.getElementById('notes').value;
+
+            const stars = Array(parseInt(rating)).fill('⭐').join(' ');
+
+            // Membuat array fields yang akan dikirim
+            const fields = [
+                {
+                    name: '',
+                    value: `\`${currentDateTime}\``,
+                    inline: false
+                },
+                {
+                    name: '👤 Nama Discord',
+                    value: `\`${discordName}\``,
+                    inline: false
+                }
+            ];
+
+            // Hanya menambahkan field jika ada nilainya
+            if (cityName) {
+                fields.push({
+                    name: '🌆 Kota Bermain',
+                    value: `\`${cityName}\``,
+                    inline: false
+                });
+            }
+
+            if (vga) {
+                fields.push({
+                    name: '🎮 VGA',
+                    value: `\`${vga}\``,
+                    inline: false
+                });
+            }
+
+            if (deviceType) {
+                fields.push({
+                    name: '💻 Jenis Perangkat',
+                    value: `\`${deviceType}\``,
+                    inline: false
+                });
+            }
+
+            // Rating selalu ditambahkan karena wajib
+            fields.push({
+                name: '🌟 Rating',
+                value: stars,
+                inline: false
+            });
+
+            if (notes) {
+                fields.push({
+                    name: '📝 Catatan',
+                    value: `\`\`\`${notes}\`\`\``,
+                    inline: false
+                });
+            }
+
+            const embed = {
+                title: '📋 Rating Layanan',
+                color: 0x00ffff,
+                fields: fields,
+                timestamp: new Date().toISOString()
+            };
+
+            const webhookUrl = 'https://discord.com/api/webhooks/1310982443481960550/jjFCfi4dDq-I0G6zsR3vCVo17EA0wSG8pkgh_Gznr_C0WI4uRvkeoj6DersGUdaec0KQ';
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ embeds: [embed] })
+                });
+
+                if (response.ok) {
+                    document.getElementById('successMessage').style.display = 'block';
+                    document.getElementById('ratingForm').reset();
+                    setTimeout(() => {
+                        document.getElementById('successMessage').style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Failed to send rating');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Terjadi kesalahan saat mengirim rating. Silakan coba lagi.');
+            }
+        }
+    </script>
+</body>
+</html>

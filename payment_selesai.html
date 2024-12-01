@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="typewriter-title">XVISUAL ROLEPLAY - KONFIRMASI PEMBAYARAN</title>
+    <link rel="icon" type="image/png" href="icon/1.png">
+    <link rel="shortcut icon" type="image/png" href="icon/1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/1.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .form-title {
+            color: #00ffff;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            color: #fff;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 5px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        /* Styling khusus untuk input file */
+        input[type="file"] {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            background: #00ffff;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin-right: 1rem;
+            color: #000;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="text"]:focus,
+        input[type="file"]:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(45deg, #00ffff, #007bff);
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 1rem;
+            }
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 5px;
+            color: #fff;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .form-select:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        }
+
+        .form-select option {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .form-select option:disabled {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Konfirmasi Pembayaran</h2>
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="discordName">Nama Discord:</label>
+                <input type="text" 
+                       id="discordName" 
+                       name="discordName" 
+                       required
+                       placeholder="Contoh: Riianes">
+            </div>
+            <div class="form-group">
+                <label for="modName">Nama Mod/Presets:</label>
+                <select id="modName" 
+                        name="modName" 
+                        required
+                        class="form-select">
+                    <option value="" disabled selected>Pilih mod/presets</option>
+                    
+                    <!-- Quantv Series -->
+                    <option value="Quantv">Quantv</option>
+                    <option value="Quantv Pro">Quantv Pro</option>
+                    <option value="Quantv Premium">Quantv Premium</option>
+                    
+                    <option disabled>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</option>
+                    
+                    <!-- Other Mods -->
+                    <option value="BOREALIS (LIMITED) (2/3)">BOREALIS (LIMITED) (2/3)</option>
+                    <option value="8 LEVEL MOTION BLUR">8 LEVEL MOTION BLUR</option>
+                    <option value="All GameSource (RESHADE)">All GameSource (RESHADE)</option>
+                    <option value="ADVANCE STREET LIGHT">ADVANCE STREET LIGHT</option>
+                    <option value="CITIZEN TIER 1">CITIZEN TIER 1</option>
+                    <option value="CITIZEN TIER 2">CITIZEN TIER 2</option>
+                    <option value="CITIZEN TIER 3 (FULL ACCESS)">CITIZEN TIER 3 (FULL ACCESS)</option>
+                    <option value="GTA V UPSCALER">GTA V UPSCALER</option>
+                    <option value="Gold_Tier MegaPack (RESHADE)">Gold_Tier MegaPack (RESHADE)</option>
+                    <option value="INTER (RESHADE)">INTER (RESHADE)</option>
+                    <option value="MONSTER KILLER00K V1 - V5 (RESHADE)">MONSTER KILLER00K V1 - V5 (RESHADE)</option>
+                    <option value="NP KOIL SHADERS (ENB)">NP KOIL SHADERS (ENB)</option>
+                    <option value="NVE (NATURAL VISION EVOLVED)">NVE (NATURAL VISION EVOLVED)</option>
+                    <option value="ROAD MODs PACK">ROAD MODs PACK</option>
+                    <option value="RTGI (RAY TRACING)">RTGI (RAY TRACING)</option>
+                    <option value="VEGETATION FOSA 5.0">VEGETATION FOSA 5.0</option>
+                    <option value="VEGETATION GREEN GROOVE 2.0">VEGETATION GREEN GROOVE 2.0</option>
+                    <option value="VIDEO EXPORT SMOOTHING TOOL">VIDEO EXPORT SMOOTHING TOOL</option>
+                    <option value="WEAPON SOUND PACK">WEAPON SOUND PACK</option>
+                    <option value="XVISUAL V1 (ENB)">XVISUAL V1 (ENB)</option>
+                    <option value="XVISUAL Ver.I (RESHADE)">XVISUAL Ver.I (RESHADE)</option>
+                    <option value="XVISUAL Ver.II Quantv (RESHADE)">XVISUAL Ver.II Quantv (RESHADE)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ticketNumber">Nomor Tiket:</label>
+                <input type="text" 
+                       id="ticketNumber" 
+                       name="ticketNumber" 
+                       required
+                       maxlength="4"
+                       pattern="[0-9]{4}"
+                       oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 4)"
+                       placeholder="Masukkan 4 digit nomor tiket">
+            </div>
+            <div class="form-group">
+                <label for="paymentProof">Upload Bukti Pembayaran:</label>
+                <input type="file" 
+                       id="paymentProof" 
+                       name="paymentProof" 
+                       accept="image/*" 
+                       required>
+            </div>
+            <button type="submit">Kirim Konfirmasi</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const discordName = document.getElementById('discordName').value;
+            const modName = document.getElementById('modName').value;
+            const ticketNumber = document.getElementById('ticketNumber').value;
+            const paymentProof = document.getElementById('paymentProof').files[0];
+            
+            // Validasi semua field
+            if (!discordName.trim()) {
+                alert('Mohon isi nama Discord!');
+                return;
+            }
+
+            if (!modName.trim()) {
+                alert('Mohon isi nama mod/presets!');
+                return;
+            }
+
+            if (!ticketNumber) {
+                alert('Mohon isi nomor tiket!');
+                return;
+            }
+
+            if (!/^\d{4}$/.test(ticketNumber)) {
+                alert('Nomor tiket harus 4 digit angka!');
+                return;
+            }
+
+            if (!paymentProof) {
+                alert('Mohon upload bukti pembayaran!');
+                return;
+            }
+
+            // Validasi tipe file (hanya gambar)
+            const validImageTypes = ['image/jpeg', 'image/png', 'image/gif'];
+            if (!validImageTypes.includes(paymentProof.type)) {
+                alert('File harus berupa gambar (JPG, PNG, atau GIF)!');
+                return;
+            }
+            
+            const formData = new FormData();
+            
+            // Membuat embed message
+            const embed = {
+                embeds: [{
+                    title: "📝 KONFIRMASI PEMBAYARAN",
+                    color: 0x00ffff,
+                    fields: [
+                        {
+                            name: "```━━━━━━━━━━━━━━━━━━━━━━```",
+                            value: "\u200B",
+                            inline: false
+                        },
+                        {
+                            name: "👤 Discord",
+                            value: "```" + discordName + "```",
+                            inline: false
+                        },
+                        {
+                            name: "🎫 Produk",
+                            value: "```" + modName + "```",
+                            inline: false
+                        },
+                        {
+                            name: "🎫 Nomor Tiket",
+                            value: "```" + ticketNumber + "```",
+                            inline: false
+                        },
+                        {
+                            name: "```━━━━━━━━━━━━━━━━━━━━━━```",
+                            value: "\u200B",
+                            inline: false
+                        }
+                    ],
+                    footer: {
+                        text: `Waktu: ${new Date().toLocaleString('id-ID')}`
+                    }
+                }]
+            };
+
+            formData.append("payload_json", JSON.stringify(embed));
+            formData.append("files[]", paymentProof);
+
+            try {
+                // Tampilkan pesan loading
+                const button = e.target.querySelector('button');
+                const originalText = button.textContent;
+                button.textContent = 'Mengirim...';
+                button.disabled = true;
+
+                const response = await fetch('https://discord.com/api/webhooks/1310946227722125403/ABmpavtgM84bAYgMkWwk1zwkHaBQqMYQH2DKLvbrEOTYU8iv24dYsbJbF-8Kg4QCXiQv', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    alert('Konfirmasi pembayaran berhasil dikirim!');
+                    document.getElementById('paymentForm').reset();
+                } else {
+                    alert('Terjadi kesalahan saat mengirim konfirmasi.');
+                }
+            } catch (error) {
+                alert('Terjadi kesalahan: ' + error.message);
+            } finally {
+                button.textContent = originalText;
+                button.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

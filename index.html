@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title id="typewriter-title">XVISUAL ROLEPLAY - BERANDA</title>
+    <link rel="icon" type="image/png" href="icon/1.png">
+    <link rel="shortcut icon" type="image/png" href="icon/1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/1.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="aurora-container" style="background: linear-gradient(to bottom, #0a0a15 0%, #1a1a2f 100%);">
+        <div class="aurora" style="opacity: 0.8;"></div>
+        <div class="aurora" style="opacity: 0.8;"></div>
+        <div class="aurora" style="opacity: 0.8;"></div>
+    </div>
+    <div class="stars" style="opacity: 0.9;"></div>
+
+    <!-- Navbar baru -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="icon/1.png" alt="XVISUAL" class="nav-logo">
+            <span>XVISUAL ROLEPLAY</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active">
+                <i class="fas fa-home"></i>
+                Beranda
+            </a>
+            <a href="review.html" class="nav-link">
+                <i class="fas fa-star"></i>
+                Instal & Review
+            </a>
+            <a href="kota_xvisual.html" class="nav-link">
+                <i class="fas fa-city"></i>
+                Kota Xvisual
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Cari mod..." onkeyup="searchProducts()">
+            </div>
+        </div>
+        <div class="products-container" id="productsContainer">
+            <div class="product-card" data-category="ENB" data-special="true">
+                <div class="card-inner">
+                    <!-- Front Side -->
+                    <div class="card-front">
+                        <div class="special-badge">BASIC</div>
+                        <div class="product-image-placeholder">
+                            <div class="cyber-pattern"></div>
+                            <div class="product-type">QUANTV BASIC</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Quantv (BASIC)</h3>
+                            <p class="price"><i class="fas fa-tag"></i> Rp 50.000</p>
+                            <button class="buy-btn"><i class="fas fa-shopping-cart"></i> Beli Sekarang</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>BASIC Package</h3>
+                        <ul class="special-features">
+                            <li><i class="fas fa-check-circle"></i> Mendapatkan Quantv versi terbaru</li>
+                            <li><i class="fas fa-gift"></i> BONUS EKSKLUSIF: Sudah Include 1 Preset Quantv untuk pengalaman visual yang memukau</li>
+                        </ul>
+                        <button class="buy-btn">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB" data-special="true">
+                <div class="card-inner">
+                    <!-- Front Side -->
+                    <div class="card-front">
+                        <div class="special-badge">PRO</div>
+                        <div class="bestseller-badge">
+                            <i class="fas fa-crown"></i>
+                            Item Terlaris
+                        </div>
+                        <div class="product-image-placeholder">
+                            <div class="cyber-pattern"></div>
+                            <div class="product-type">QUANTV PRO</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Quantv (PRO)</h3>
+                            <p class="price">Rp 75.000</p>
+                            <button class="buy-btn">Beli Sekarang</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>PRO Package</h3>
+                        <ul class="special-features">
+                            <li>UPDATE GRATIS : Versi dan fitur terbaru secara gratis selama 30 hari</li>
+                            <li>Semua fitur dari paket BASIC</li>
+                            <div class="included-basic">
+                                <li>• Quantv versi terbaru</li>
+                                <li>• BONUS: 1 Preset Quantv eksklusif</li>
+                            </div>
+                        </ul>
+                        <button class="buy-btn">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB" data-special="true">
+                <div class="card-inner">
+                    <!-- Front Side -->
+                    <div class="card-front">
+                        <div class="special-badge">PREMIUM</div>
+                        <div class="product-image-placeholder">
+                            <div class="cyber-pattern"></div>
+                            <div class="product-type">QUANTV PREMIUM</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Quantv (PREMIUM)</h3>
+                            <p class="price">Rp 150.000</p>
+                            <button class="buy-btn">Beli Sekarang</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Side -->
+                    <div class="card-back">
+                        <h3>PREMIUM Package</h3>
+                        <ul class="special-features">
+                            <li>BONUS SPESIAL: Presets Pack Xvisual Ver I (Isi 10 Preset warna eksklusif)</li>
+                            <li>Semua fitur dari paket PRO</li>
+                            <div class="included-pro">
+                                <li>• Update GRATIS 30 hari</li>
+                                <li>• Quantv versi terbaru</li>
+                                <li>• Preset Quantv eksklusif</li>
+                            </div>
+                            <li class="savings">HEMAT 75K! Penawaran Terbaik!</li>
+                        </ul>
+                        <button class="buy-btn">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="LIMITED">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">BOREALIS</div>
+                </div>
+                <div class="product-info">
+                    <h3>BOREALIS (LIMITED) (2/3)</h3>
+                    <p class="description">Edisi SUPER LIMITED! Mod "One And Only" dengan fitur Borealis yang unik. Hanya tersedia 3 lisensi - Jangan sampai kehabisan!</p>
+                    <p class="price">Rp 500.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">MOTION BLUR</div>
+                </div>
+                <div class="product-info">
+                    <h3>8 LEVEL MOTION BLUR</h3>
+                    <p class="description">Kontrol penuh atas efek motion blur! 8 level intensitas berbeda untuk menciptakan gameplay cinematic sesuai seleramu.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">GAME SOURCE</div>
+                </div>
+                <div class="product-info">
+                    <h3>All GameSource (RESHADE)</h3>
+                    <p class="description">Koleksi 11 preset Reshade pilihan untuk berbagai suasana gameplay. Tingkatkan kualitas visual game-mu secara instan!</p>
+                    <p class="price">Rp 25.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">STREET LIGHT</div>
+                </div>
+                <div class="product-info">
+                    <h3>ADVANCE STREET LIGHT</h3>
+                    <p class="description">30 variasi warna lampu jalan yang memukau! Ciptakan suasana kota yang hidup dan dinamis sesuai keinginanmu.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="CITIZEN">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">TIER 1</div>
+                </div>
+                <div class="product-info">
+                    <h3>CITIZEN TIER 1</h3>
+                    <p class="description">Paket starter dengan 5 mod citizen berkualitas! 3 mod normal + 2 mod No Night untuk pengalaman roleplay yang lebih imersif.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="CITIZEN">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">TIER 2</div>
+                </div>
+                <div class="product-info">
+                    <h3>CITIZEN TIER 2</h3>
+                    <p class="description">Upgrade koleksi citizen-mu! 10 mod premium dengan 4 citizen normal dan 6 citizen No Night untuk variasi yang lebih beragam.</p>
+                    <p class="price">Rp 100.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="CITIZEN">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">TIER 3</div>
+                </div>
+                <div class="product-info">
+                    <h3>CITIZEN TIER 3 (FULL ACCESS)</h3>
+                    <p class="description">AKSES PENUH ke 19+ mod citizen! Gratis update seumur hidup untuk setiap mod citizen baru. Solusi lengkap untuk para kolektor citizen!</p>
+                    <p class="price">Rp 200.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">GTA V UPSCALER</div>
+                </div>
+                <div class="product-info">
+                    <h3>GTA V UPSCALER</h3>
+                    <p class="description">Tingkatkan resolusi game hingga 4K! Tersedia dalam 3 versi: NVE, PureDark (NO FG & FG). Khusus pengguna RTX.</p>
+                    <p class="price">Rp 150.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">GOLD TIER</div>
+                </div>
+                <div class="product-info">
+                    <h3>Gold_Tier MegaPack (RESHADE)</h3>
+                    <p class="description">100+ preset warna eksklusif langsung di fx reshade! Koleksi terlengkap untuk customisasi visual tanpa batas.</p>
+                    <p class="price">Rp 250.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">INTER</div>
+                </div>
+                <div class="product-info">
+                    <h3>INTER (RESHADE)</h3>
+                    <p class="description">25 preset Reshade premium dengan tone warna yang artistik. Sempurna untuk content creator yang menginginkan tampilan unik!</p>
+                    <p class="price">Rp 25.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">MONSTER KILLER</div>
+                </div>
+                <div class="product-info">
+                    <h3>MONSTER KILLER00K V1 - V5 (RESHADE)</h3>
+                    <p class="description">9 preset Reshade dengan efek visual yang agresif dan berani. Buat gameplay-mu terlihat lebih intense!</p>
+                    <p class="price">Rp 30.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">NP KOIL</div>
+                </div>
+                <div class="product-info">
+                    <h3>NP KOIL SHADERS (ENB)</h3>
+                    <p class="description">Preset legendaris dari NoPixel! Kombinasi sempurna ENB, Reshade, dan file pendukung untuk visual.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">NVE</div>
+                </div>
+                <div class="product-info">
+                    <h3>NVE (NATURAL VISION EVOLVED)</h3>
+                    <p class="description">Rasakan GTA V dengan grafis next-gen! Dilengkapi NVE versi terbaru dan BONUS preset eksklusif untuk pengalaman visual terbaik.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">ROAD MODS</div>
+                </div>
+                <div class="product-info">
+                    <h3>ROAD MODs PACK</h3>
+                    <p class="description">8 variasi tekstur jalan premium + update gratis seumur hidup! Tingkatkan realisme kota dengan tekstur jalan yang detail.</p>
+                    <p class="price">Rp 200.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">RTGI</div>
+                </div>
+                <div class="product-info">
+                    <h3>RTGI (RAY TRACING)</h3>
+                    <p class="description">Plugin Reshade premium dengan teknologi ray-tracing! Bonus 10 preset RTGI eksklusif, kompatibel dengan semua versi Reshade.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">VEGETATION</div>
+                </div>
+                <div class="product-info">
+                    <h3>VEGETATION FOSA 5.0</h3>
+                    <p class="description">Mod vegetasi premium untuk lingkungan yang lebih hidup! Tambahkan detail dan keindahan pada setiap sudut perkotaan.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">VEGETATION</div>
+                </div>
+                <div class="product-info">
+                    <h3>VEGETATION GREEN GROOVE 2.0</h3>
+                    <p class="description">Transformasi total untuk vegetasi game! Pohon dan tanaman yang lebih realistis untuk pengalaman bermain yang lebih imersif.</p>
+                    <p class="price">Rp 50.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">VIDEO TOOL</div>
+                </div>
+                <div class="product-info">
+                    <h3>VIDEO EXPORT SMOOTHING TOOL</h3>
+                    <p class="description">Tools profesional untuk content creator! Hasilkan video Rockstar Editor yang super halus dengan bantuan langsung dari tim admin.</p>
+                    <p class="price">Rp 300.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="SOUND">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">WEAPON SOUND</div>
+                </div>
+                <div class="product-info">
+                    <h3>WEAPON SOUND PACK</h3>
+                    <p class="description">Revolusi audio senjata! Nikmati suara tembakan yang lebih realistis dan powerful untuk pengalaman action yang lebih intens.</p>
+                    <p class="price">Rp 150.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="ENB">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">XVISUAL</div>
+                </div>
+                <div class="product-info">
+                    <h3>XVISUAL V1 (ENB)</h3>
+                    <p class="description">Paket visual premium dengan preset ENB eksklusif + bonus preset Reshade dan file pendukung. Visual next-gen untuk game-mu!</p>
+                    <p class="price">Rp 250.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">XVISUAL</div>
+                </div>
+                <div class="product-info">
+                    <h3>XVISUAL Ver.I (RESHADE)</h3>
+                    <p class="description">10 preset Reshade premium dengan tone warna yang unik. Sempurna untuk screenshot dan video content!</p>
+                    <p class="price">Rp 150.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="RESHADE">
+                <div class="product-image-placeholder">
+                    <div class="cyber-pattern"></div>
+                    <div class="product-type">XVISUAL II</div>
+                </div>
+                <div class="product-info">
+                    <h3>XVISUAL Ver.II Quantv (RESHADE)</h3>
+                    <p class="description">10 preset spesial untuk pengguna Quantv! Kombinasi sempurna dengan mod Quantv untuk hasil visual yang memukau.</p>
+                    <p class="price">Rp 150.000</p>
+                    <button class="buy-btn">Beli Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials-section">
+        <h2 class="testimonials-title">
+            <i class="fas fa-star star-icon"></i>
+            Apa Kata Mereka?
+            <i class="fas fa-star star-icon"></i>
+        </h2>
+        <div class="testimonials-overlay">
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <h3>Gezka MHD</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Grafiknya gacorr banget nyaman dimata yaa bukan dihati, adminnya super ramah dan frendly mau ngajarin yang ga ngerti apa2 sampe ngerti. rekomen bangetttttt"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-award"></i> Top Review</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-ninja"></i>
+                        <h3>Sphinx</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Grafiknya keren banget, admin nya jga baik banget cuy"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card premium">
+                    <div class="user-info">
+                        <i class="fas fa-user-astronaut"></i>
+                        <h3>NuggetVolante</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Grafiknya Muantepp cikkk, Worth it bangetttt"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-gem"></i> Premium User</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Jade</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"MASYAALLAH, mantap mod nya mint"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card premium">
+                    <div class="user-info">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Kuro</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Sangat memuaskan, admin fast respon dan ramah"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-bolt"></i> Fast Response</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>J</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Grafiknya keren banget bikin enak dilihat"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>!utaa</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"grafiknya bagus + ga berat, mantep lah pokoknya"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-laptop"></i> Performance</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-astronaut"></i>
+                        <h3>Hie</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"grafiknya bagus banget, sama sekali ga berat, rekomended"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-tachometer-alt"></i> Optimized</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card premium">
+                    <div class="user-info">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>FIIK</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"grafiknya bagus, sama sekali ga berat, rekomended, admin fast respon"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-bolt"></i> Fast Response</span>
+                        <span class="badge"><i class="fas fa-rocket"></i> High Performance</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-ninja"></i>
+                        <h3>Baji Gur</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Sangat memuaskan, admin fast respon"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-bolt"></i> Fast Response</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card premium">
+                    <div class="user-info">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Lungnuad</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Marktop NVE Terbaru"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-crown"></i> NVE User</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card premium">
+                    <div class="user-info">
+                        <i class="fas fa-user-astronaut"></i>
+                        <h3>marcoboy</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"grafik nya keren abis, gokil parah rekomendasi banget jika matanya seger main fivem dan gampang banget buat dipasang di fivemnya. langsung aja open tiketnya"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-award"></i> Top Review</span>
+                        <span class="badge"><i class="fas fa-tools"></i> Easy Install</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-ninja"></i>
+                        <h3>Tobi</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"grafik nya gacor parah sih, recommend dah pokoknya. di kasih tutor juga cara pasang nya. gass skuy langsung open tiket"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-graduation-cap"></i> Tutorial Support</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card premium">
+                    <div class="user-info">
+                        <i class="fas fa-user-astronaut"></i>
+                        <h3>Navya Lyne Ch.</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"SUPER SUPER cakep, graphicnya enak di lihat, cocok untuk streaming & vtuber seperti aq, recommended!"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-video"></i> Streamer</span>
+                        <span class="badge"><i class="fas fa-star"></i> VTuber</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>morz</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Grafiknya mantap banget! Sekali coba langsung betah, detailnya bikin suasana makin hidup!"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-palette"></i> Detail Lover</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="user-info">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Roman Dimitri</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"keren modnya ukuran ringan tapi gacor"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-feather"></i> Lightweight</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card premium">
+                    <div class="user-info">
+                        <i class="fas fa-user-ninja"></i>
+                        <h3>Akane Tachibana</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"graphics nya banyak pilihan dan keren, makin seneng foto di kota jadinya"</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-camera"></i> Photographer</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card premium">
+                    <div class="user-info">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Gallang</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Gokil user friendly bgt ini, yg belum pernah pasang dan mau pasang graphic mod gampang caranya kalo perhatiin bener tutorial dan reviewnya."</p>
+                    <div class="testimonial-badges">
+                        <span class="badge"><i class="fas fa-check-circle"></i> Verified Buyer</span>
+                        <span class="badge"><i class="fas fa-thumbs-up"></i> User Friendly</span>
+                        <span class="badge"><i class="fas fa-book"></i> Tutorial Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="show-more-testimonials">
+            <i class="fas fa-chevron-down"></i>
+            Lihat Testimoni Lainnya
+        </button>
+    </div>
+    <div class="footer">
+        Website dibangun dengan sepenuh hati <span class="heart">💖</span>
+    </div>
+    
+    <script>
+        function typeWriter() {
+            const title = "XVISUAL ROLEPLAY - BERANDA";
+            let i = 0;
+            const speed = 100; // Kecepatan mengetik (ms)
+            
+            function type() {
+                if (i < title.length) {
+                    document.title = title.substring(0, i + 1) + "_";
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    document.title = title; // Hapus underscore di akhir
+                    // Mulai ulang animasi setelah jeda
+                    setTimeout(() => {
+                        i = 0;
+                        type();
+                    }, 2000);
+                }
+            }
+            
+            type();
+        }
+
+        // Jalankan fungsi setelah DOM dimuat
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', typeWriter);
+        } else {
+            typeWriter();
+        }
+    </script>
+
+    <button class="chat-toggle" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <div class="live-chat-container">
+        <div class="chat-header">
+            <h3>
+                <span class="bot-status"></span>
+                XVISUAL Assistant
+            </h3>
+            <i class="fas fa-times" onclick="toggleChat()" style="cursor: pointer;"></i>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-message">
+                <div class="bot-message">
+                    Halo! Saya adalah XVISUAL Assistant. Ada yang bisa saya bantu? Silakan pilih topik di bawah ini:
+                </div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <div class="faq-topics">
+                <div class="faq-topic" onclick="selectTopic('payment')">Cara Pembayaran</div>
+                <div class="faq-topic" onclick="selectTopic('lockpick')">Tentang Lockpick</div>
+                <div class="faq-topic" onclick="selectTopic('install')">Cara Install</div>
+                <div class="faq-topic" onclick="selectTopic('support')">Bantuan Teknis</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function toggleChat() {
+        const chatContainer = document.querySelector('.live-chat-container');
+        const chatToggle = document.querySelector('.chat-toggle');
+        
+        if (chatContainer.style.display === 'none' || !chatContainer.style.display) {
+            chatContainer.style.display = 'block';
+            chatToggle.style.display = 'none';
+        } else {
+            chatContainer.style.display = 'none';
+            chatToggle.style.display = 'flex';
+        }
+    }
+
+    function addMessage(message, isBot = true) {
+        const chatBody = document.getElementById('chatBody');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'chat-message';
+        
+        const messageContent = document.createElement('div');
+        messageContent.className = isBot ? 'bot-message' : 'user-message';
+        messageContent.textContent = message;
+        
+        messageDiv.appendChild(messageContent);
+        chatBody.appendChild(messageDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function selectTopic(topic) {
+        const responses = {
+            payment: "Untuk melakukan pembelian:\n1. Klik tombol 'Beli Sekarang' pada produk yang Anda inginkan\n2. Lakukan pembayaran sesuai harga yang tertera\n3. Upload bukti pembayaran di halaman ini\n4. Produk akan dikirim melalui room tiket setelah pembayaran dikonfirmasi",
+            lockpick: "Kami menggunakan mata uang Lockpick untuk bertransaksi (1000 rupiah = 1 lockpick) jadi mohon dipahami dengan baik ya.",
+            install: "Klik Instal & Review pada navigasi di pojok atas kanan (<a href='review.html' style='color: #00ff00; text-decoration: underline;'>klik disini</a>) silakan cari nama item yang ingin kamu ketahui untuk cara penginstalan",
+            support: "Butuh bantuan teknis? Anda bisa menghubungi tim support kami melalui <a href='https://discord.com/channels/777918050258649109/1229052784318615734' target='_blank' style='color: #00ff00; text-decoration: underline;'>Tiket Discord</a>. Kami siap membantu 24/7!"
+        };
+        
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'chat-message';
+        const messageContent = document.createElement('div');
+        messageContent.className = 'bot-message';
+        messageContent.innerHTML = responses[topic];
+        
+        messageDiv.appendChild(messageContent);
+        document.getElementById('chatBody').appendChild(messageDiv);
+        document.getElementById('chatBody').scrollTop = document.getElementById('chatBody').scrollHeight;
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html> 
